@@ -34,3 +34,4 @@ console.log(saludo.toUpperCase())
 
 //.indexOf()
 console.log(saludo.indexOf("Santiago")) //retorna la posición del primer caracter de la palabra
+

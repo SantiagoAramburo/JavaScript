@@ -61,3 +61,16 @@ let numerosArray = Array.from(numeros) //convierte el set a un array
 let numerosset2 = new Set(numerosArray) //convierte el array a un set
 let numerosfiltrados = numerosArray.filter(num => num > 2) //filtra los números mayores a 2
 console.log(numerosfiltrados)
+
+//Maps (colecciones de pares clave-valor), son los diccionarios en otros lenguajes
+let persona = new Map()
+persona.set("nombre", "Santiago")
+persona.set("edad", 25)
+persona.set("país", "México")
+persona.set("edad", 26) //actualiza el valor de una clave existente
+console.log(persona)
+console.log(persona.get("nombre")) //Santiago
+
+console.log(persona.keys()) //retorna las claves del map
+console.log(persona.values()) //retorna los valores del map
+console.log(persona.entries()) //retorna un array con los pares clave-valor
