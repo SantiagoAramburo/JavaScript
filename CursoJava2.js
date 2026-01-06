@@ -73,4 +73,9 @@ console.log(persona.get("nombre")) //Santiago
 
 console.log(persona.keys()) //retorna las claves del map
 console.log(persona.values()) //retorna los valores del map
-console.log(persona.entries()) //retorna un array con los pares clave-valor
+console.log(persona.entries()) //retorna un array con los pares clave-valor 
+
+let numeros1 =[10,20,30,40,50]
+for (let i=0; i<numeros1.length; i++){
+    console.log(`Número: ${numeros1[i]}`)
+}

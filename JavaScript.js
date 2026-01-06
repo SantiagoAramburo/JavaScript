@@ -35,3 +35,33 @@ console.log(saludo.toUpperCase())
 //.indexOf()
 console.log(saludo.indexOf("Santiago")) //retorna la posición del primer caracter de la palabra
 
+//funciones, son los def de Python
+function sumar(a, b){
+    return a + b
+}
+
+let resultado = sumar(5, 10)
+console.log(`El resultado de la suma es: ${resultado}`)
+
+//funciones flecha
+const restar = (a, b) => {
+    return a - b
+}
+
+let resultadoResta = restar(10, 5)
+console.log(`El resultado de la resta es: ${resultadoResta}`)
+
+//Si la función flecha tiene una sola línea de código, se puede simplificar
+const multiplicar = (a, b) => a * b
+
+function externa(){
+    console.log("Función externa")
+    
+    const interna = () => {
+        console.log("Función interna")
+    }
+    
+    interna()
+}
+
+externa()
