@@ -65,3 +65,63 @@ function externa(){
 }
 
 externa()
+
+//Objetos
+let persona = {
+    nombre: "Santiago",
+    edad: 25,
+    saludar: function(){
+        console.log(`Hola, mi nombre es ${this.nombre} y tengo ${this.edad} años`)
+    }
+}
+
+console.log(persona.nombre)
+persona.saludar()
+
+//Objetos anidados
+let estudiante = {
+    nombre: "Ana",
+    edad: 22,
+    direccion: {
+        calle: "Calle Falsa 123",
+        ciudad: "Springfield",
+        pais: "USA"
+    }
+}
+
+console.log(`La estudiante vive en ${estudiante.direccion.ciudad}, ${estudiante.direccion.pais}`)
+
+//Destructuración de objetos
+let {nombre: nombreEstudiante, edad: edadEstudiante, direccion: {calle: calleEstudiante}} = estudiante
+console.log(`Nombre: ${nombreEstudiante}, Edad: ${edadEstudiante}, Calle: ${calleEstudiante}`)
+
+//propagación de objetos
+let estudiante2 = {...estudiante, carrera: "Ingeniería"}
+console.log(estudiante2)
+
+//clases avanzadas
+class Animal {
+    constructor(nombre, especie) {
+        this.nombre = nombre;
+        this.especie = especie;
+    }
+    
+    hacerSonido() {
+        console.log("El animal hace un sonido");
+    }
+}
+
+class Perro extends Animal {
+    constructor(nombre, raza) {
+        super(nombre, "Perro");
+        this.raza = raza;
+    }
+    
+    hacerSonido() {
+        console.log("El perro ladra");
+    }
+}
+
+let miPerro = new Perro("Firulais", "Labrador");
+console.log(`Mi perro se llama ${miPerro.nombre} y es de la raza ${miPerro.raza}`);
+miPerro.hacerSonido();
