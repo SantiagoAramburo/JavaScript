@@ -120,11 +120,12 @@ function numprimo(n) {
 }
 console.log(numprimo(4));
 
-function secreta(n) {
+function factorial(n) {
   let f = 1;
   for (let i = 2; i <= n; i++) {
     f = (f*i);
   }
   return f;
 }
-console.log("factorial de 5 es: " + secreta(5));
+console.log("factorial de 5 es: " + factorial(5));
+

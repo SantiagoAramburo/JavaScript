@@ -79,3 +79,25 @@ let numeros1 =[10,20,30,40,50]
 for (let i=0; i<numeros1.length; i++){
     console.log(`Número: ${numeros1[i]}`)
 }
+
+//poo
+class Chairo{
+    halabar_A_AMLO(){
+        console.log("AMLO es el mejor presidente de la historia de México")
+        console.log("*tiene kk en el cerebro")
+    }
+    halabar_a_morena(){
+        console.log("Morena es el mejor partido político de México")
+        console.log("*ignora la corrupción y el nepotismo")
+    }
+    ir_por_croquetas(){
+        console.log("Y ahora vamos por las croquetas del bienestar")
+        console.log("*se las roba el chairo")
+    }
+}
+
+let chairo1 = new Chairo()
+chairo1.halabar_A_AMLO()
+chairo1.halabar_a_morena()
+chairo1.ir_por_croquetas()
+
