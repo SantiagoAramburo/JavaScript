@@ -125,3 +125,24 @@ class Perro extends Animal {
 let miPerro = new Perro("Firulais", "Labrador");
 console.log(`Mi perro se llama ${miPerro.nombre} y es de la raza ${miPerro.raza}`);
 miPerro.hacerSonido();
+
+
+//manejo de errores
+try {
+    let resultado = sumar(5, "10") //esto no genera error en JS, pero puede causar problemas lógicos
+    if (isNaN(resultado)) {
+        throw new Error("El resultado de la suma no es un número válido")
+    }
+    console.log(`El resultado es: ${resultado}`)
+} catch (error) {
+    console.error(`Error: ${error.message}`)
+} finally {
+    console.log("Ejecución finalizada")
+}
+
+let v = 5 / 0
+if (!isFinite(v)) {
+    console.log("Error: División por cero")
+} else {
+    console.log(`Resultado: ${v}`)
+}
