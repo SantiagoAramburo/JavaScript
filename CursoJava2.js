@@ -101,3 +101,89 @@ chairo1.halabar_A_AMLO()
 chairo1.halabar_a_morena()
 chairo1.ir_por_croquetas()
 
+//funciones en classes
+
+class Calculadora{
+    sumar(a, b){
+        return a + b
+    }
+    restar(a, b){
+        return a - b
+    }
+    multiplicar(a, b){
+        return a * b
+    }
+    dividir(a, b){
+        if(b === 0){
+            return "No se puede dividir entre cero"
+        }
+        return a / b
+    }
+}
+
+let calc = new Calculadora()
+console.log(`Suma: ${calc.sumar(5, 3)}`)
+console.log(`Resta: ${calc.restar(5, 3)}`)
+console.log(`Multiplicación: ${calc.multiplicar(5, 3)}`)
+console.log(`División: ${calc.dividir(5, 0)}`)
+console.log(`División: ${calc.dividir(5, 2)}`)
+//fin poo
+
+//propiedades privadas en clases
+class CuentaBancaria{
+    #saldo //propiedad privada
+
+    constructor(saldoInicial){
+        this.#saldo = saldoInicial
+    }
+
+    depositar(cantidad){
+        this.#saldo += cantidad
+        console.log(`Depósito: ${cantidad}, Nuevo saldo: ${this.#saldo}`)
+    }
+
+    retirar(cantidad){
+        if(cantidad > this.#saldo){
+            console.log("Fondos insuficientes")
+            return
+        }
+        this.#saldo -= cantidad
+        console.log(`Retiro: ${cantidad}, Nuevo saldo: ${this.#saldo}`)
+    }
+
+    obtenerSaldo(){
+        return this.#saldo
+    }
+}
+
+let cuenta = new CuentaBancaria(1000)
+cuenta.depositar(500)
+cuenta.retirar(200)
+console.log(`Saldo actual: ${cuenta.obtenerSaldo()}`)
+
+"CuentaBancaria.#saldo = 5000" //Error: no se puede acceder a una propiedad privada fuera de la clase
+
+//getters y setters para propiedades privadas
+class Persona{
+    #nombre
+
+    constructor(nombre){
+        this.#nombre = nombre
+    }
+
+    get nombre(){
+        return this.#nombre
+    }
+
+    set nombre(nuevoNombre){
+        this.#nombre = nuevoNombre
+    }
+}
+
+let persona1 = new Persona("Santiago")
+console.log(`Nombre: ${persona1.nombre}`) //getter
+
+persona1.nombre = "Carlos" //setter
+console.log(`Nombre actualizado: ${persona1.nombre}`)
+
+//fin getters y setters
