@@ -128,4 +128,3 @@ function factorial(n) {
   return f;
 }
 console.log("factorial de 5 es: " + factorial(5));
-

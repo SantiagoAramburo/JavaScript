@@ -146,3 +146,44 @@ if (!isFinite(v)) {
 } else {
     console.log(`Resultado: ${v}`)
 }
+
+function lanzarError() {
+throw new Error("Este es un error personalizado")
+}
+
+try {
+lanzarError()
+} catch (error) {
+console.error(`Error capturado: ${error.message}`)
+}
+
+//Metodos de consola
+console.log("Mensaje de log")
+console.info("Mensaje de info")
+console.warn("Mensaje de advertencia")
+console.error("Mensaje de error")
+
+console.table([{nombre: "Santiago", edad: 25}, {nombre: "Ana", edad: 22}])
+
+console.time("Tiempo de ejecución")
+for(let i = 0; i < 100000000; i++){}
+console.timeEnd("Tiempo de ejecución")
+
+console.trace("Traza de ejecución")
+console.table(persona)
+console.group("Usuario:")
+console.log("Nombre: Santiago")
+console.log("Edad: 25")
+console.groupEnd("Usuario:")
+
+//Asserts
+console.assert(1 === 1, "Esto no fallará")
+console.assert(1 === 2, "Esto fallará: 1 no es igual a 2")
+//Los asserts hacen que el programa lance un error si la condición es falsa
+
+//Modulos
+export function add(a, b) {
+    return a + b;
+}
+
+console.log(add(5,10))

@@ -187,3 +187,4 @@ persona1.nombre = "Carlos" //setter
 console.log(`Nombre actualizado: ${persona1.nombre}`)
 
 //fin getters y setters
+
